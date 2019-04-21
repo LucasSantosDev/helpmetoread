@@ -50,25 +50,35 @@ function core(velocity, textarea) {
 	//calculo da velocidade
 	switch (velocity) {
 		case '100':
-			velocity = 1000
+			velocity = 180
+			break
 		case '200':
-			velocity = 900
+			velocity = 150
+			break
 		case '300':
-			velocity = 800
+			velocity = 130
+			break
 		case '400':
-			velocity = 700
-		case '500':
-			velocity = 600
-		case '600':
-			velocity = 500
-		case '700':
-			velocity = 400
-		case '800':
-			velocity = 300
-		case '900':
-			velocity = 200
-		case '1000':
 			velocity = 100
+			break
+		case '500':
+			velocity = 80
+			break
+		case '600':
+			velocity = 70
+			break
+		case '700':
+			velocity = 60
+			break
+		case '800':
+			velocity = 50
+			break
+		case '900':
+			velocity = 40
+			break
+		case '1000':
+			velocity = 30
+			break
 	}
 
 	// velocity = (velocity * atext.length) / 60
@@ -91,6 +101,7 @@ function core(velocity, textarea) {
 	)
 
 	countdown.forEach(function(count) {
+		console.log(velocity)
 		$('.countdown').fadeIn(900, function() {
 			$('.countdown').text(count)
 			textFit(document.getElementsByClassName('hot-area')[0]);
