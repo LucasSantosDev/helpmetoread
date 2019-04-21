@@ -4,10 +4,6 @@ $(document).ready(function() {
 
 function reload() {
 	window.location.reload()
-
-	$('.form-options').css({'display': 'inline-block'})
-	$('.words').css({'display': 'none'})
-	atext = []
 }
 
 function letsGo() {
@@ -15,7 +11,7 @@ function letsGo() {
 	var textarea = $('#text').val()
 
 	if (textarea == "") {
-		alert("Text required")
+		swal("Error!", "Text Required", "error")
 	} else {
 		core(velocity, textarea)
 	}

@@ -61,9 +61,17 @@ input:focus, textarea:focus {
 	color: #FFF;
 }
 
+.mandou-bem-lek {
+	width: 40%;
+}
+
 @media (max-width: 768px){
 	.link-github {
 		display: none;
+	}
+
+	.mandou-bem-lek {
+		width: 100%;
 	}
 
 	.jumbotron{
