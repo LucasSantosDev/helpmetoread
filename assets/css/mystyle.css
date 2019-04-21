@@ -1,0 +1,72 @@
+body {
+	width: 100%;
+	height: 2000px;
+	overflow: hidden;
+	background: url('https://www.xmple.com/wallpaper/blue-pink-gradient-linear-1920x1080-c2-ff69b4-00008b-a-300-f-14.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center -500px;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.header {
+	font-size: 5em;
+}
+
+.hot-area {
+	height: 150px;
+}
+
+.my-jumbotron {
+	background: transparent;
+}
+
+.jumbotron {
+	padding: 15px;
+}
+
+.my-btn {
+	width: 80%;
+	font-size: 40px;
+
+}
+
+textarea {
+	resize: none;
+	border: 1px solid #7B68EE !important;
+}
+
+input:focus, textarea:focus {
+    outline: none !important;
+}
+
+.reload {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	color: #FFF;
+	cursor: pointer;
+}
+.reload img {
+	width: 60px;
+}
+
+.link-github {
+	position: fixed;
+	bottom: 10px;
+	color: #FFF;
+}
+
+.link-github a {
+	color: #FFF;
+}
+
+@media (max-width: 768px){
+	.link-github {
+		display: none;
+	}
+
+	.jumbotron{
+		padding: 15px 0;
+	}
+}
