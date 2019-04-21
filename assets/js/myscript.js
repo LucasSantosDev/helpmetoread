@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('.reload').css({'display': 'none'})
+	$('.github').css({'display': 'none'})
 })
 
 function reload() {
@@ -51,7 +52,7 @@ function core(velocity, textarea) {
 		})
 	})
 
-	setTimeout(function() {		
+	setTimeout(function() {
 		$('.countdown').css({'display': 'none'})
 		$('.hot-area').css(
 			{
@@ -76,5 +77,12 @@ function core(velocity, textarea) {
 				$('.hot-area').text("")
 			})
 		})
+
+		setTimeout(function() {
+			$('.words').css({'display': 'none'})
+			$('.form-options').css({'display': 'none'})
+			$('.github').css({'display': 'inline-block'})
+		}, 6000 + (velocity * atext.length))
+
 	}, 7300)
 }
