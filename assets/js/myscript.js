@@ -1,6 +1,27 @@
+function changeText(cont1,cont2,speed){
+	var Otext    = cont1.text()
+	var Ocontent = Otext.split("")
+	var i        = 0
+
+	function show() {
+	    if(i < Ocontent.length) {  
+	      	cont2.append(Ocontent[i])
+	      	i = i + 1
+		}
+	}
+  	var Otimer = setInterval(show, speed)
+}
+
 $(document).ready(function() {
+
+	changeText($(".text-hide"), $(".script-type"), 150)
+
+  	clearInterval(Otimer)
+
 	$('.reload').css({'display': 'none'})
+
 	$('.github').css({'display': 'none'})
+
 })
 
 function reload() {
@@ -27,11 +48,35 @@ function core(velocity, textarea) {
 	atext = text.split(' ')
 
 	//calculo da velocidade
-	velocity = ((atext.length * 200) / velocity)
+	switch (velocity) {
+		case '100':
+			velocity = 1000
+		case '200':
+			velocity = 900
+		case '300':
+			velocity = 800
+		case '400':
+			velocity = 700
+		case '500':
+			velocity = 600
+		case '600':
+			velocity = 500
+		case '700':
+			velocity = 400
+		case '800':
+			velocity = 300
+		case '900':
+			velocity = 200
+		case '1000':
+			velocity = 100
+	}
+
+	// velocity = (velocity * atext.length) / 60
 
 	$('.reload').css({'display': 'inline-block'})
 	$('.words').css({'display': 'inline-block'})
 	$('.form-options').css({'display': 'none'})
+	$('.github').css({'display': 'none'})
 
 	//Countdown to init read
 	$('body').css({'overflow': 'hidden'})
@@ -74,7 +119,6 @@ function core(velocity, textarea) {
 			$('.hot-area').fadeIn(velocity, function() {
 				$('.hot-area').text(txt)
 				textFit(document.getElementsByClassName('hot-area')[0]);
-				console.log(txt + ' > ' + Date.now() + ' > ' + indice)
 			})
 			$('.hot-area').fadeOut(velocity, function() {
 				$('.hot-area').text("")

@@ -65,6 +65,37 @@ input:focus, textarea:focus {
 	width: 40%;
 }
 
+.toasty .bottom-right {
+	position: fixed;
+	bottom: 0px;
+	right: -35px;
+	width: 250px;
+}
+
+.toasty .bottom-left {
+	position: fixed;
+	bottom: -20px;
+	left: -15px;
+	width: 100px;
+	transform: rotate(60deg);
+}
+
+.toasty .top-center {
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	width: 200px;
+	transform: rotate(180deg);
+}
+
+.left-left {
+	position: fixed;
+	top: 20%;
+	left: -20px;
+	width: 200px;
+	transform: rotate(90deg);
+}
+
 @media (max-width: 768px){
 	.link-github {
 		display: none;

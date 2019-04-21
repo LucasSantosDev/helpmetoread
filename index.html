@@ -35,6 +35,8 @@
 	<script type="text/javascript" src="assets/js/myscript.js"></script>
 
 	<script type="text/javascript" src="assets/js/fitText.js"></script>
+
+	<script type="text/javascript" src="assets/js/konami-code.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -43,7 +45,8 @@
 				<div class="col-md-8 offset-md-2 pt-3 form-options">
 					<div class="jumbotron jumbotron mt-1">
 					  	<div class="container">
-					    	<h1 class="display-2 text-center mb-4 header" style="font-size: 3em;"><img src="https://i1.wp.com/christcenteredministries.org/wp-content/uploads/helping-others-2.png" style="width: 20%;" class="text-center"> Two Devs</h1>
+					  		<p class="text-hide" style="display: none;"> Two Devs</p>
+					    	<h1 class="script-type display-2 text-center mb-4 header" style="font-size: 3em;"><img src="https://i1.wp.com/christcenteredministries.org/wp-content/uploads/helping-others-2.png" style="width: 20%;" class="text-center"></h1>
 					    	<div class="row">
 						    	<div class="col-md-12">
 						    		<label>Your Text</label>
@@ -57,7 +60,7 @@
 						    		<output for="velocity" onforminput="value = velocity.valueAsNumber;"></output>
 						    	</div>
 						    	<div class="col-md-4 p-0 text-center">
-						    		<button onclick="letsGo()" type="button" class="mt-4 my-btn btn btn-primary">Let's Go!</button>
+						    		<button onclick="letsGo()" type="button" class="mt-4 my-btn btn btn-primary">Let's Go! <i class="fa fa-arrow-right"></i></button>
 						    	</div>
 						    </div>
 					  	</div>
@@ -79,10 +82,24 @@
 		</div>
 	</div>
 	<div class="link-github col-md-12 text-center">
+		<div class="instructions-to-have-fun">
+			TO HAVE FUN: KONAMI CODE - 
+			<i class="fa fa-arrow-up"></i> <i class="fa fa-arrow-up"></i> 
+			<i class="fa fa-arrow-down"></i> <i class="fa fa-arrow-down"></i> 
+			<i class="fa fa-arrow-left"></i> <i class="fa fa-arrow-right"></i> 
+			<i class="fa fa-arrow-left"></i> <i class="fa fa-arrow-right"></i> 
+			<b>B</b> <b>A</b>
+		</div>
 		<a href="https://github.com/LucasSantosDev" target="_blank"><i class="fa fa-github"></i> Lucas Santos Dev</a> | <a href="https://github.com/tarcisioLima" target="_blank"><i class="fa fa-github"></i> Tarcisio Lima</a>
 	</div>
 	<div class="reload" onclick="reload()">
 		Reload? <img src="https://www.searchpng.com/wp-content/uploads/2019/04/Reload-Button-PNG-715x715.png">
+	</div>
+	<div class="toasty" style="visibility: hidden;">
+		<img class="bottom-right" src="https://images.uncyc.org/pt/2/26/Toasty.png">
+		<img class="bottom-left" src="https://images.uncyc.org/pt/2/26/Toasty.png">
+		<img class="top-center" src="https://images.uncyc.org/pt/2/26/Toasty.png">
+		<img class="left-left" src="https://images.uncyc.org/pt/2/26/Toasty.png">
 	</div>
 </body>
 </html>
