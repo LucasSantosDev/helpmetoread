@@ -26,6 +26,9 @@ function core(velocity, textarea) {
 
 	atext = text.split(' ')
 
+	//calculo da velocidade
+	velocity = ((atext.length * 200) / velocity)
+
 	$('.reload').css({'display': 'inline-block'})
 	$('.words').css({'display': 'inline-block'})
 	$('.form-options').css({'display': 'none'})
@@ -67,11 +70,11 @@ function core(velocity, textarea) {
 			}
 		)
 
-		atext.forEach(function(txt) {
+		atext.forEach(function(txt, indice) {
 			$('.hot-area').fadeIn(velocity, function() {
 				$('.hot-area').text(txt)
 				textFit(document.getElementsByClassName('hot-area')[0]);
-				console.log(txt)
+				console.log(txt + ' > ' + Date.now() + ' > ' + indice)
 			})
 			$('.hot-area').fadeOut(velocity, function() {
 				$('.hot-area').text("")
