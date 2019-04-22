@@ -1,16 +1,20 @@
 body {
 	width: 100%;
-	height: 2000px;
+	height: 100vh;
 	overflow: hidden;
-	background: url('https://www.xmple.com/wallpaper/blue-pink-gradient-linear-1920x1080-c2-ff69b4-00008b-a-300-f-14.svg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center -500px;
-	font-family: 'PT Sans Narrow', sans-serif;
+	transition: all 0.3s linear;		
+	background: linear-gradient(310deg, #1f0d90, #7d339f, #007bff);
+	background-size: 600% 600%;
+	font-family: 'PT Sans Narrow', sans-serif;	
+
+  	-webkit-animation: gradiente 5s ease-in-out infinite;
+	-moz-animation: gradiente 5s ease-in-out infinite;
+	animation: gradiente 5s ease-in-out infinite;
 }
 
 .header {
 	font-size: 5em;
+	font-weight: 900;
 }
 
 .hot-area {
@@ -107,5 +111,34 @@ input:focus, textarea:focus {
 
 	.jumbotron{
 		padding: 15px 0;
+	}
+}
+
+.jumbotron.jumbotron.mt-1{
+	box-shadow: 5px 6px 40px 15px rgba(0, 0, 0, 0.25);
+}
+/* Gradiente */
+
+@-moz-keyframes gradiente {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes gradiente {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
 	}
 }
